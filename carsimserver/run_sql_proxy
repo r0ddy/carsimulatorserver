@@ -1,2 +1,0 @@
-#!/bin/bash
-./cloud_sql_proxy -instances="ece-5725-car-simulator:us-east4:carsimulatordb"=tcp:5432

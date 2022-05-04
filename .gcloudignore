@@ -1,0 +1,6 @@
+.gcloudignore
+.git
+.gitignore
+**pycache**/
+/setup.cfg
+venv/
