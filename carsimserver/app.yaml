@@ -1,5 +1,5 @@
 runtime: python38
-
+entrypoint: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
 env_variables:
   # This setting is used in settings.py to configure your ALLOWED_HOSTS
   APPENGINE_URL: https://ece-5725-car-simulator.uk.r.appspot.com

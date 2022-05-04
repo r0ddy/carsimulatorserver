@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&h03rt#6s*n)3bd%!1#wcnhcx=hgwk38t79t938!j^llbgxm-m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ece-5725-car-simulator.uk.r.appspot.com']
 
 
 # Application definition
