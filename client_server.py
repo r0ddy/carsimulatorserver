@@ -12,7 +12,7 @@ class DeviceType:
 
 log = logging.getLogger('event-logger')
 sio = socketio.Server()
-app = socketio.WSGIApp(sio)
+app = socketio.WSGIApp(sio, static_files={'/': './static'})
 load_dotenv()
 PASSWORD = os.getenv("PASSWORD")
 
@@ -39,4 +39,4 @@ def send_msg(sid, data):
         sio.emit('notif', data['msg'], room=DeviceType.BOT)
 
 if __name__ == '__main__':
-    eventlet.wsgi.server(eventlet.listen(('', 5000)),app)
+    eventlet.wsgi.server(eventlet.listen(('', 3000)),app)
