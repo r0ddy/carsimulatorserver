@@ -1,11 +1,13 @@
 import socketio
+
+from devicetypes import DeviceType
 sio = socketio.Client()
 @sio.on('notif')
 def on_message(data):
-    print('I received a message!')
+    print(data)
 
 sio.connect('https://devicenetwork-dot-car-simulator-349213.uk.r.appspot.com/')
-sio.emit('join', {'device_type': 'bot'})
+sio.emit('join', {'device_type': DeviceType.BOT})
 
 def send_data(arg):
     res = ""
